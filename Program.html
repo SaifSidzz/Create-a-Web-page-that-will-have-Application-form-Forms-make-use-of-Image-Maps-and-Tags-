@@ -1,0 +1,90 @@
+<!-- Program No 4. Create a Web page that will have Application form (Forms), make use of Image Maps and Tags. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Application Form with Image Map</title>
+<style>
+  body {
+font-family: Arial, sans-serif;
+background-color: #eef2f7;
+padding: 20px;
+}
+h1, h2 {
+color: #333;
+}
+form {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+max-width: 600px;
+margin-bottom: 30px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+label {
+display: block;
+margin-top: 10px;
+font-weight: bold;
+}
+input, select, textarea {
+width: 100%;
+padding: 8px;
+  margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+button {
+margin-top: 15px;
+padding: 10px 15px;
+background-color: #007bff;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+button:hover {
+background-color: #0056b3;
+}
+.image-map-section {
+margin-top: 30px;
+}
+</style>
+</head>
+<body>
+<h1>Online Application Form</h1>
+<!-- Application Form -->
+<form action="submit_form.php" method="post">
+  <label for="name">Full Name:</label>
+<input type="text" id="name" name="fullname" required>
+<label for="email">Email Address:</label>
+<input type="email" id="email" name="email" required>
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="dob">
+<label for="gender">Gender:</label>
+<select id="gender" name="gender">
+<option value="" disabled selected>-- Select --</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="other">Other</option>
+</select>
+<label for="about">Tell us about yourself:</label>
+<textarea id="about" name="about" rows="4"></textarea>
+<button type="submit">Submit Application</button>
+</form>
+<!-- Image Map Section -->
+<div class="image-map-section">
+<h2>Click on the Regions of the Image</h2>
+<p>This image has clickable areas defined using an image map.</p>
+<img src="https://via.placeholder.com/600x400" alt="Sample Image Map" usemap="#samplemap">
+<map name="samplemap">
+<area shape="rect" coords="50,50,200,150" href="https://www.google.com" alt="Google" target="_blank">
+<area shape="circle" coords="400,200,60" href="https://www.wikipedia.org" alt="Wikipedia" target="_blank">
+<area shape="poly" coords="250,300,300,250,350,300,300,350" href="https://www.example.com" alt="Example Site" target="_blank">
+</map>
+<p>🟦 Click the rectangle to go to Google<br>
+⚪ Click the circle to go to Wikipedia<br>
+🔺 Click the triangle to go to Example.com</p>
+</div>
+</body>
+</html>
